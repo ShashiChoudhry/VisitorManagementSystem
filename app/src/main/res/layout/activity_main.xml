@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/visitorId"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="VisitorId"-->
+    <!--        tools:layout_editor_absoluteX="59dp"-->
+    <!--        tools:layout_editor_absoluteY="361dp" />-->
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text="VISITORS MANAGEMENT SYSTEM"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/fNameField"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="10dp"
+        android:hint="First Name"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/lNameField"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Last Name"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/fNameField"
+        app:layout_constraintStart_toStartOf="@+id/fNameField"
+        app:layout_constraintTop_toBottomOf="@+id/fNameField" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/exitTimeField"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Pick Exit Time"-->
+    <!--        tools:layout_editor_absoluteX="56dp"-->
+    <!--        tools:layout_editor_absoluteY="571dp" />-->
+
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Email"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/lNameField"
+        app:layout_constraintStart_toStartOf="@+id/lNameField"
+        app:layout_constraintTop_toBottomOf="@+id/lNameField" />
+
+
+    <LinearLayout
+        android:id="@+id/checkboxGroupLayout"
+        android:layout_width="122dp"
+        android:layout_height="161dp"
+        android:layout_marginTop="52dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintStart_toEndOf="@+id/enterDateField"
+        app:layout_constraintTop_toBottomOf="@+id/emailField">
+
+        <CheckBox
+            android:id="@+id/twoWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Wheeler"
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="381dp" />
+
+        <CheckBox
+            android:id="@+id/threeWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Wheeler" />
+
+        <CheckBox
+            android:id="@+id/fourWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 Wheeler" />
+
+        <!--        <CheckBox-->
+        <!--            android:id="@+id/naBox"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="NA" />-->
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/phoneNoField"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:hint="Phone No"
+        app:layout_constraintEnd_toEndOf="@+id/emailField"
+        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintStart_toStartOf="@+id/emailField"
+        app:layout_constraintTop_toBottomOf="@+id/emailField" />
+
+    <EditText
+        android:id="@+id/ExitField"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:hint="Pick Exit Date"
+        app:layout_constraintEnd_toEndOf="@+id/enterDateField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/enterDateField"
+        app:layout_constraintTop_toBottomOf="@+id/enterDateField" />
+
+    <EditText
+        android:id="@+id/enterDateField"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:hint="Pick Entry Date"
+        app:layout_constraintEnd_toEndOf="@+id/phoneNoField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/phoneNoField"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNoField" />
+
+    <!--            <CheckBox-->
+    <!--                android:id="@+id/twoWheelerBox"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="2 Wheeler"-->
+    <!--                tools:layout_editor_absoluteX="53dp"-->
+    <!--                tools:layout_editor_absoluteY="381dp" />-->
+
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ExitField"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/ExitField"
+        app:layout_constraintTop_toBottomOf="@+id/ExitField"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/checkboxGroupLayout"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="@+id/checkboxGroupLayout"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxGroupLayout"
+        app:layout_constraintVertical_bias="0.223" />
+    <!--    <EditText-->
+    <!--        android:id="@+id/enterTimeField"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:hint="Pick Entry Time"-->
+    <!--        tools:layout_editor_absoluteX="53dp"-->
+    <!--        tools:layout_editor_absoluteY="421dp" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
