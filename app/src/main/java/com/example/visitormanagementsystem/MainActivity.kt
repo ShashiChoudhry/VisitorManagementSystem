@@ -4,7 +4,6 @@ import android.app.DatePickerDialog
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -40,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         wheel3 = findViewById(R.id.threeWheelerBox)
         wheel4 = findViewById(R.id.fourWheelerBox)
 
+        submit = findViewById(R.id.submitBtn)
         clear = findViewById(R.id.clearBtn)
 
         fillEntryDate(entryDate)
