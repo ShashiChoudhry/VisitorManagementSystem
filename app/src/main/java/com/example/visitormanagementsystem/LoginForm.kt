@@ -1,11 +1,21 @@
 package com.example.visitormanagementsystem
 
 import android.content.Intent
+import android.content.res.TypedArray
+import android.graphics.Color
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.MotionEvent
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 
 class LoginForm: AppCompatActivity() {
 
@@ -29,6 +39,10 @@ class LoginForm: AppCompatActivity() {
         submit = findViewById(R.id.loginBtn)
         forgot = findViewById(R.id.forgotBtn)
 
+//        password.setOnTouchListener() {
+//
+//        }
+
         submit.setOnClickListener()
         {
             var uid = id.text.toString()
@@ -43,7 +57,14 @@ class LoginForm: AppCompatActivity() {
                 Toast.makeText(this, "Uid or password does not match", Toast.LENGTH_SHORT).show()
             }
         }
+
+        forgot.setOnClickListener() {
+            // https://ums.lpu.in/lpuums/forgetpassword.aspx
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://ums.lpu.in/lpuums/forgetpassword.aspx")
+
+            startActivity(intent)
+        }
+
     }
-
-
 }

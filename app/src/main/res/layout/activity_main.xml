@@ -6,15 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <!--    <EditText-->
-    <!--        android:id="@+id/visitorId"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:hint="VisitorId"-->
-    <!--        tools:layout_editor_absoluteX="59dp"-->
-    <!--        tools:layout_editor_absoluteY="361dp" />-->
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -55,14 +46,6 @@
         app:layout_constraintEnd_toEndOf="@+id/fNameField"
         app:layout_constraintStart_toStartOf="@+id/fNameField"
         app:layout_constraintTop_toBottomOf="@+id/fNameField" />
-
-    <!--    <EditText-->
-    <!--        android:id="@+id/exitTimeField"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:hint="Pick Exit Time"-->
-    <!--        tools:layout_editor_absoluteX="56dp"-->
-    <!--        tools:layout_editor_absoluteY="571dp" />-->
 
     <EditText
         android:id="@+id/emailField"
@@ -107,12 +90,6 @@
             android:layout_height="wrap_content"
             android:text="4 Wheeler" />
 
-        <!--        <CheckBox-->
-        <!--            android:id="@+id/naBox"-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:text="NA" />-->
-
     </LinearLayout>
 
     <EditText
@@ -121,6 +98,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
         android:hint="Phone No"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/emailField"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="@+id/emailField"
@@ -132,6 +110,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:hint="Pick Exit Date"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/enterDateField"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/enterDateField"
@@ -143,19 +122,11 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:hint="Pick Entry Date"
+        android:inputType="date"
         app:layout_constraintEnd_toEndOf="@+id/phoneNoField"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/phoneNoField"
         app:layout_constraintTop_toBottomOf="@+id/phoneNoField" />
-
-    <!--            <CheckBox-->
-    <!--                android:id="@+id/twoWheelerBox"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:text="2 Wheeler"-->
-    <!--                tools:layout_editor_absoluteX="53dp"-->
-    <!--                tools:layout_editor_absoluteY="381dp" />-->
-
 
     <Button
         android:id="@+id/submitBtn"
@@ -181,14 +152,6 @@
         app:layout_constraintStart_toStartOf="@+id/checkboxGroupLayout"
         app:layout_constraintTop_toBottomOf="@+id/checkboxGroupLayout"
         app:layout_constraintVertical_bias="0.223" />
-    <!--    <EditText-->
-    <!--        android:id="@+id/enterTimeField"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:hint="Pick Entry Time"-->
-    <!--        tools:layout_editor_absoluteX="53dp"-->
-    <!--        tools:layout_editor_absoluteY="421dp" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

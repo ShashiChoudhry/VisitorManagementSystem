@@ -6,18 +6,48 @@
     android:layout_height="match_parent"
     tools:context=".LoginForm">
 
+
+    <TextView
+        android:id="@+id/SingInView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="80dp"
+
+        android:gravity="center"
+        android:text="Sign In"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/userField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="20dp"
         android:hint="UserId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/SingInView" />
+
+<!--    <com.example.visitormanagementsystem.EditTextCustom-->
+<!--        android:id="@+id/passField"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:inputType="textPassword"-->
+
+<!--        android:paddingRight="8dp"-->
+<!--        android:longClickable="false" />-->
 
     <EditText
         android:id="@+id/passField"
@@ -30,7 +60,10 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"
+        android:inputType="textPassword"
 
+        android:paddingRight="8dp"
+        android:longClickable="false"
         android:hint="Password" />
 
     <Button
@@ -39,9 +72,13 @@
         android:layout_height="49dp"
         android:layout_marginTop="24dp"
         android:text="Login"
+
         app:layout_constraintEnd_toEndOf="@+id/passField"
         app:layout_constraintStart_toStartOf="@+id/passField"
-        app:layout_constraintTop_toBottomOf="@+id/passField" />
+        app:layout_constraintTop_toBottomOf="@+id/passField">
+
+    </Button>
+
 
     <Button
         android:id="@+id/forgotBtn"
