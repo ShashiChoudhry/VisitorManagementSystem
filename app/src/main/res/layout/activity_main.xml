@@ -1,76 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
 
+    tools:context=".MainActivity">
+<!--    android:background="@drawable/vms_screen"-->
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_vms"
+        android:elevation="3dp"
         android:gravity="center"
+        android:shadowColor="@color/black"
         android:text="VISITORS MANAGEMENT SYSTEM"
-        android:textSize="16dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/fNameField"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="10dp"
-        android:hint="First Name"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="403dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border_custom"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <EditText
-        android:id="@+id/lNameField"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:hint="Last Name"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/fNameField"
-        app:layout_constraintStart_toStartOf="@+id/fNameField"
-        app:layout_constraintTop_toBottomOf="@+id/fNameField" />
+        <EditText
+            android:id="@+id/fNameField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="First Name"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.952"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/emailField"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:hint="Email"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/lNameField"
-        app:layout_constraintStart_toStartOf="@+id/lNameField"
-        app:layout_constraintTop_toBottomOf="@+id/lNameField" />
+        <EditText
+            android:id="@+id/lNameField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Last Name"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/fNameField"
+            app:layout_constraintStart_toStartOf="@+id/fNameField"
+            app:layout_constraintTop_toBottomOf="@+id/fNameField" />
 
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Email"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/lNameField"
+            app:layout_constraintStart_toStartOf="@+id/lNameField"
+            app:layout_constraintTop_toBottomOf="@+id/lNameField" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/checkboxGroupLayout"
-        android:layout_width="122dp"
-        android:layout_height="161dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="99dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="64dp"
         android:orientation="vertical"
+        android:background="@drawable/border_custom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
-        app:layout_constraintStart_toEndOf="@+id/enterDateField"
-        app:layout_constraintTop_toBottomOf="@+id/emailField">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <CheckBox
             android:id="@+id/twoWheelerBox"
@@ -92,66 +111,107 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/phoneNoField"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
-        android:hint="Phone No"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/emailField"
-        app:layout_constraintHorizontal_bias="0.068"
-        app:layout_constraintStart_toStartOf="@+id/emailField"
-        app:layout_constraintTop_toBottomOf="@+id/emailField" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="150dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/border_custom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <EditText
-        android:id="@+id/ExitField"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:hint="Pick Exit Date"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="@+id/enterDateField"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/enterDateField"
-        app:layout_constraintTop_toBottomOf="@+id/enterDateField" />
+        <EditText
+            android:id="@+id/phoneNoField"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:layout_above="@+id/ExitField"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Phone No"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/enterDateField"
-        android:layout_width="130dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:hint="Pick Entry Date"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="@+id/phoneNoField"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/phoneNoField"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNoField" />
+        <EditText
+            android:id="@+id/ExitField"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:layout_above="@+id/enterDateField"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Pick Exit Date"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="@+id/enterDateField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/enterDateField"
+            app:layout_constraintTop_toBottomOf="@+id/enterDateField" />
+
+        <EditText
+            android:id="@+id/enterDateField"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Pick Entry Date"
+            android:inputType="date"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNoField"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/phoneNoField"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNoField" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_button"
+        android:onClick="save"
         android:text="Submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ExitField"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="@+id/ExitField"
-        app:layout_constraintTop_toBottomOf="@+id/ExitField"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <Button
         android:id="@+id/clearBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/checkboxGroupLayout"
-        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/checkboxGroupLayout"
         app:layout_constraintTop_toBottomOf="@+id/checkboxGroupLayout"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.12" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/custom_button"
+        android:onClick="get"
+        android:text="Fetch"
+        app:layout_constraintEnd_toEndOf="@+id/clearBtn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/clearBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
