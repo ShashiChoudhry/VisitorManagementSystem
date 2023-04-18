@@ -6,11 +6,10 @@ import android.content.SharedPreferences
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.TextView
+import android.view.ViewGroup
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -65,7 +64,26 @@ class MainActivity : AppCompatActivity() {
 
         sharedPref()
 
+        submit.setOnClickListener() {
+            save()
+//            showToast()
+        }
+
     }
+
+    fun showToast() {
+        val vg:ViewGroup? = findViewById(R.id.custom_toast)
+        val inflater = layoutInflater
+        val relativeLayout: View = inflater.inflate(R.layout.activity_main,vg) as RelativeLayout
+        val tv = relativeLayout.findViewById<TextView>(R.id.txtVw)
+        tv.text = "Custom Toast Notification"
+        val toast = Toast(applicationContext)
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0 , 100)
+        toast.duration = Toast.LENGTH_LONG
+        toast.view = relativeLayout
+        toast.show()
+    }
+
 
     private fun sharedPref() {
         sharedPreferences = getSharedPreferences(myPreference, Context.MODE_PRIVATE)
@@ -82,7 +100,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun save(view: View?) {
+    fun save() {
         val enterDt = entryDate.text.toString()
         val exitDt = exitDate.text.toString()
         val fName = fname.text.toString()
@@ -101,6 +119,7 @@ class MainActivity : AppCompatActivity() {
         editor.putString(PhoneNo, phone)
 
         editor.apply()
+//        showToast()
     }
 
     fun get(view: View?) {

@@ -7,21 +7,28 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/launcher2"
-        android:label="@string/app_name"
+        android:label=""
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitorManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".LoginForm"
+            android:name=".SplashScreen"
             android:exported="true">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        
-        <activity android:name="com.example.visitormanagementsystem.MainActivity"></activity>
+
+        <activity
+            android:name=".LoginForm"
+            android:exported="true">
+        </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
