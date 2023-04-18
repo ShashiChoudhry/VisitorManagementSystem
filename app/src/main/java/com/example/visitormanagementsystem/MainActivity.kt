@@ -2,6 +2,7 @@ package com.example.visitormanagementsystem
 
 import android.app.DatePickerDialog
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var submit : Button
     private lateinit var clear : Button
+    private lateinit var sign : Button
 
     lateinit var sharedPreferences: SharedPreferences
     private val myPreference = "mypref"
@@ -57,6 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         submit = findViewById(R.id.submitBtn)
         clear = findViewById(R.id.clearBtn)
+        sign = findViewById(R.id.signBtn)
 
         fillEntryDate(entryDate as EditText)
         fillEntryDate(exitDate as EditText)
@@ -69,20 +72,25 @@ class MainActivity : AppCompatActivity() {
 //            showToast()
         }
 
+        sign.setOnClickListener() {
+            val e = TouchDemo(this)
+            setContentView(e)
+        }
+
     }
 
-    fun showToast() {
-        val vg:ViewGroup? = findViewById(R.id.custom_toast)
-        val inflater = layoutInflater
-        val relativeLayout: View = inflater.inflate(R.layout.activity_main,vg) as RelativeLayout
-        val tv = relativeLayout.findViewById<TextView>(R.id.txtVw)
-        tv.text = "Custom Toast Notification"
-        val toast = Toast(applicationContext)
-        toast.setGravity(Gravity.CENTER_VERTICAL, 0 , 100)
-        toast.duration = Toast.LENGTH_LONG
-        toast.view = relativeLayout
-        toast.show()
-    }
+//    fun showToast() {
+//        val vg:ViewGroup? = findViewById(R.id.custom_toast)
+//        val inflater = layoutInflater
+//        val relativeLayout: View = inflater.inflate(R.layout.activity_main,vg) as RelativeLayout
+//        val tv = relativeLayout.findViewById<TextView>(R.id.txtVw)
+//        tv.text = "Custom Toast Notification"
+//        val toast = Toast(applicationContext)
+//        toast.setGravity(Gravity.CENTER_VERTICAL, 0 , 100)
+//        toast.duration = Toast.LENGTH_LONG
+//        toast.view = relativeLayout
+//        toast.show()
+//    }
 
 
     private fun sharedPref() {

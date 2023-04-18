@@ -52,6 +52,7 @@ class LoginForm: AppCompatActivity() {
 //                Move to LoginForm
                 intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                finish()
             }
             else {
                 Toast.makeText(this, "Uid or password does not match", Toast.LENGTH_SHORT).show()

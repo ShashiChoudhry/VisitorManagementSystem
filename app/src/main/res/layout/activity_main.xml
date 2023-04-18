@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/constLay"
+    android:background="@drawable/vms_screen"
     tools:context=".MainActivity">
 <!--    android:background="@drawable/vms_screen"-->
     <TextView
@@ -31,7 +32,6 @@
         android:layout_width="403dp"
         android:layout_height="190dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/border_custom"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -76,38 +76,7 @@
             app:layout_constraintEnd_toEndOf="@+id/lNameField"
             app:layout_constraintStart_toStartOf="@+id/lNameField"
             app:layout_constraintTop_toBottomOf="@+id/lNameField" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/checkboxGroupLayout"
-        android:layout_width="99dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="64dp"
-        android:orientation="vertical"
-        android:background="@drawable/border_custom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <CheckBox
-            android:id="@+id/twoWheelerBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2 Wheeler" />
-
-        <CheckBox
-            android:id="@+id/threeWheelerBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3 Wheeler" />
-
-        <CheckBox
-            android:id="@+id/fourWheelerBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4 Wheeler" />
+<!--        android:background="@drawable/border_custom"-->
 
     </LinearLayout>
 
@@ -115,12 +84,11 @@
         android:id="@+id/relativeLayout"
         android:layout_width="150dp"
         android:layout_height="210dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/border_custom"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
+        <!--        android:background="@drawable/border_custom"-->
         <EditText
             android:id="@+id/phoneNoField"
             android:layout_width="130dp"
@@ -177,15 +145,48 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/submitBtn"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/custom_button"
-        android:text="Submit"
-        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        android:onClick="get"
+        android:text="Fetch"
+        app:layout_constraintEnd_toEndOf="@+id/clearBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/clearBtn"
+        app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
+
+    <LinearLayout
+        android:id="@+id/checkboxGroupLayout"
+        android:layout_width="99dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="36dp"
+
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <!--        android:background="@drawable/border_custom"-->
+        <CheckBox
+            android:id="@+id/twoWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Wheeler" />
+
+        <CheckBox
+            android:id="@+id/threeWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Wheeler" />
+
+        <CheckBox
+            android:id="@+id/fourWheelerBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4 Wheeler" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/clearBtn"
@@ -195,52 +196,64 @@
         android:text="Clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/checkboxGroupLayout"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="@+id/checkboxGroupLayout"
         app:layout_constraintTop_toBottomOf="@+id/checkboxGroupLayout"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.124" />
 
     <Button
+        android:id="@+id/signBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/custom_button"
-        android:onClick="get"
-        android:text="Fetch"
-        app:layout_constraintEnd_toEndOf="@+id/clearBtn"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/clearBtn"
-        app:layout_constraintTop_toBottomOf="@+id/clearBtn" />
+        android:text="Signature"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/custom_button"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
 
-    <LinearLayout
-        android:id="@+id/custom_toast"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:background="#82F6D5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+    <!--    <LinearLayout-->
+<!--        android:id="@+id/custom_toast"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:background="#82F6D5"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
 
-        <ImageView
-            android:src="@drawable/ic_accepted"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"/>
+<!--        <ImageView-->
+<!--            android:src="@drawable/ic_accepted"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="10dp"/>-->
 
-        <TextView
-            android:id="@+id/txtVw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
-            android:text="Custom Toast!"
-            android:textColor="#CA0808"
-            android:textSize="15dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/txtVw"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="13dp"-->
+<!--            android:text="Custom Toast!"-->
+<!--            android:textColor="#CA0808"-->
+<!--            android:textSize="15dp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
